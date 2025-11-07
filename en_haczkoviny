@@ -1,8 +1,8 @@
 default partial alphanumeric_keys modifier_keys
 xkb_symbols "basic" {
-    // en-cz-sk-hackoviny 1.0.0 2023-11-25 by Daniel Davídek <danieldavidek@gmail.com>
+    // en-cz-sk-haczkoviny 1.0.0 2023-11-25 by gr4viton <lordmutty@gmail.com>
     //
-    // Inspired by my Windows keyboard layout from 2014-12-25.
+    // Based on my Windows keyboard layout from 2014-12-25.
     // Looked also at the cz typography layout - used parts of that description.
     //
     // Using AltGr+Shift on accented letters generates its uppercase variant.
@@ -11,7 +11,7 @@ xkb_symbols "basic" {
     // Other Czech letters besides alphanumeric keys (like uacute, uring) are generated using AltGr.
 
     include "us"
-    name[Group1]= "English (hackoviny)";
+    name[Group1]= "English (haczkoviny)";
 
     key <AC10> { [ semicolon,	colon,	uring,	Uring ] };
 

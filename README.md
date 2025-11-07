@@ -18,23 +18,20 @@ Tested on Linux Mint 21
 
 ## Install
 
-### Copy layout file
-
+Copy layout file:
 ```bash
 $ # You need to copy the `en_hackoviny` file to the place where the OS will load it.
 $ sudo su
-$ cp en_hackoviny /usr/share/x11_xkb/symbols/
+$ cp en_haczkoviny /usr/share/X11/xkb/symbols/
 ```
 
-### Add the layout to list
-
-Add the following:
+Add this layout config:
 ```
 <layout>
   <configItem>
-    <name>hackoviny</name>
-    <shortDescription>hack</shortDescription>
-    <description>English (hackoviny)</description>
+    <name>en_haczkoviny</name>
+    <shortDescription>haczkoviny</shortDescription>
+    <description>English (haczkoviny)</description>
     <languageList>
       <iso639Id>eng</iso639Id>
       <iso639Id>cze</iso639Id>
@@ -55,6 +52,9 @@ Reload keyboard cache:
 ```
 sudo dpkg-reconfigure xkb-data
 ```
+### Make sure the AltGr is selected
+
+- Ubuntu 24 
 
 ### Use the keyboard layout
 
@@ -62,6 +62,7 @@ sudo dpkg-reconfigure xkb-data
   - menu - Keyboard - Layouts - [+] button - search `hackoviny` - select `English with háčkoviny (hackoviny)` - Add - Switch to it - Profit $$$!
 - Ubuntu 24
   - settings - Keyboard - Input sources - Add input Source... - search `hackoviny` - select - Add - Switch to it - Profit $$$!
+
 
 ## License
 

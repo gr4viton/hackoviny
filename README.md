@@ -16,18 +16,52 @@ TLDR: Press AltGr + letter without diacritics, and you get the letter with Czech
 
 Tested on Linux Mint 21
 
-## How to
+## Install
 
-### Copy file
+### Copy layout file
 
-You need to copy the `en_hackoviny` file to the place where the OS will load it.
 ```bash
+$ # You need to copy the `en_hackoviny` file to the place where the OS will load it.
+$ sudo su
 $ cp en_hackoviny /usr/share/x11_xkb/symbols/
-$ # you might need to be sudo
 ```
-### Add layout
 
-- Linux Mint - menu - Keyboard - Layouts - [+] button - search `hackoviny` - select `English with háčkoviny (hackoviny)` - Add - Switch to it - Profit!
+### Add the layout to list
+
+Add the following:
+```
+<layout>
+  <configItem>
+    <name>hackoviny</name>
+    <shortDescription>hack</shortDescription>
+    <description>English (hackoviny)</description>
+    <languageList>
+      <iso639Id>eng</iso639Id>
+      <iso639Id>cze</iso639Id>
+      <iso639Id>slo</iso639Id>
+    </languageList>
+  </configItem>
+</layout>
+```
+
+Into:
+```
+$ sudo vim /usr/share/X11/xkb/rules/evdev.xml
+$ # under XML path: xkbConfigRegistry.layoutList
+$ # you can sort the layout list - so put it near english
+```
+
+Reload keyboard cache:
+```
+sudo dpkg-reconfigure xkb-data
+```
+
+### Use the keyboard layout
+
+- Linux Mint 
+  - menu - Keyboard - Layouts - [+] button - search `hackoviny` - select `English with háčkoviny (hackoviny)` - Add - Switch to it - Profit $$$!
+- Ubuntu 24
+  - settings - Keyboard - Input sources - Add input Source... - search `hackoviny` - select - Add - Switch to it - Profit $$$!
 
 ## License
 

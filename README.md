@@ -10,7 +10,7 @@ Created by gr4viton. (I also have a windows version of this keyboard layout, fro
 
 TLDR: Press AltGr + letter without diacritics, and you get the letter with Czech diacritics. Works with shift capital letters too!
 
-[!image](mint_hackoviny_2025_05_27.png)
+![image](mint_hackoviny_2025_05_27.png)
 
 ## Compatibility
 
